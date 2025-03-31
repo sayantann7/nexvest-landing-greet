@@ -22,14 +22,14 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-nexvest-black"
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black"
           >
             <motion.h1
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-4xl md:text-6xl font-bold text-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className="text-5xl md:text-7xl font-medium tracking-wider text-white uppercase"
             >
               Welcome To <span className="text-nexvest-green">NexVest</span>
             </motion.h1>
