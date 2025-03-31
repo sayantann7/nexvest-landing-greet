@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, ChevronDown } from 'lucide-react';
+import { Search, ChevronDown, ChevronRight, Briefcase, BarChart, BookmarkCheck, FileText, RefreshCw } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,6 +9,14 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const MutualFundsMenu = () => (
   <div className="w-[400px] bg-white rounded-md shadow-lg p-4">
@@ -374,13 +382,55 @@ const Navbar = () => {
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
         </div>
         
-        <motion.button 
-          className="bg-transparent text-white py-2 px-4 rounded-full border border-gray-600 hover:bg-white/5"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          My Account
-        </motion.button>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <motion.div 
+              className="flex items-center gap-2 bg-transparent text-white py-2 px-4 rounded-full border border-gray-600 hover:bg-white/5 cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Avatar className="h-6 w-6 border border-gray-500">
+                <AvatarImage src="https://github.com/shadcn.png" alt="@user" />
+                <AvatarFallback className="text-xs bg-nexvest-green text-white">UN</AvatarFallback>
+              </Avatar>
+              <span>My Account</span>
+              <ChevronDown size={16} className="text-gray-400" />
+            </motion.div>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-64 bg-white border border-gray-200 rounded-lg shadow-lg p-2 mt-2">
+            <div className="py-3 px-4">
+              <button className="bg-nexvest-green hover:bg-opacity-90 transition-opacity text-white font-medium w-full py-2 rounded-full">
+                Login / Sign-up
+              </button>
+            </div>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem className="py-2 cursor-pointer flex items-center gap-3">
+              <Briefcase className="text-nexvest-green" size={20} />
+              <span>My investments</span>
+              <ChevronRight className="ml-auto" size={16} />
+            </DropdownMenuItem>
+            <DropdownMenuItem className="py-2 cursor-pointer flex items-center gap-3">
+              <BarChart className="text-nexvest-green" size={20} />
+              <span>My SIPs</span>
+              <ChevronRight className="ml-auto" size={16} />
+            </DropdownMenuItem>
+            <DropdownMenuItem className="py-2 cursor-pointer flex items-center gap-3">
+              <BookmarkCheck className="text-nexvest-green" size={20} />
+              <span>My Watchlist</span>
+              <ChevronRight className="ml-auto" size={16} />
+            </DropdownMenuItem>
+            <DropdownMenuItem className="py-2 cursor-pointer flex items-center gap-3">
+              <FileText className="text-nexvest-green" size={20} />
+              <span>My transactions</span>
+              <ChevronRight className="ml-auto" size={16} />
+            </DropdownMenuItem>
+            <DropdownMenuItem className="py-2 cursor-pointer flex items-center gap-3">
+              <RefreshCw className="text-nexvest-green" size={20} />
+              <span>Track external mutual funds</span>
+              <ChevronRight className="ml-auto" size={16} />
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </motion.nav>
   );
