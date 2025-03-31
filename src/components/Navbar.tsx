@@ -334,7 +334,6 @@ const Navbar = () => {
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent text-white hover:bg-transparent hover:text-nexvest-green data-[state=open]:bg-transparent data-[state=open]:text-nexvest-green flex items-center gap-1 p-0">
                 <span>Mutual Funds</span>
-                <ChevronDown size={16} />
               </NavigationMenuTrigger>
               <NavigationMenuContent className="bg-white">
                 <MutualFundsMenu />
@@ -362,7 +361,6 @@ const Navbar = () => {
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent text-white hover:bg-transparent hover:text-nexvest-green data-[state=open]:bg-transparent data-[state=open]:text-nexvest-green flex items-center gap-1 p-0">
                 <span>More</span>
-                <ChevronDown size={16} />
               </NavigationMenuTrigger>
               <NavigationMenuContent className="bg-white">
                 <MoreMenu />
