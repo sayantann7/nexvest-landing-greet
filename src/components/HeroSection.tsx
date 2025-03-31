@@ -29,7 +29,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
-              className="text-5xl md:text-7xl font-medium tracking-wider text-white uppercase"
+              className="text-5xl md:text-5xl font-medium tracking-wider text-white uppercase"
             >
               Welcome To <span className="text-nexvest-green">NexVest</span>
             </motion.h1>
@@ -41,7 +41,7 @@ const HeroSection = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 min-h-screen">
         <div className="hidden md:block relative">
           <img
-            src="/lovable-uploads/e25faca9-41ef-48a7-bacf-a2b4ba1aa7b7.png"
+            src="/bg.png"
             alt="Photographer on car"
             className="object-cover h-full w-full"
           />
