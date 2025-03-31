@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -17,23 +17,25 @@ const HeroSection = () => {
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-nexvest-black">
       {/* Welcome Message Overlay */}
-      {showWelcome && (
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 0 }}
-          transition={{ duration: 0.5, delay: 2.5 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-nexvest-black"
-        >
-          <motion.h1
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl md:text-6xl font-bold text-white"
+      <AnimatePresence>
+        {showWelcome && (
+          <motion.div
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-nexvest-black"
           >
-            Welcome To <span className="text-nexvest-green">NexVest</span>
-          </motion.h1>
-        </motion.div>
-      )}
+            <motion.h1
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-4xl md:text-6xl font-bold text-white"
+            >
+              Welcome To <span className="text-nexvest-green">NexVest</span>
+            </motion.h1>
+          </motion.div>
+        )}
+      </AnimatePresence>
       
       {/* Main Hero Content */}
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 min-h-screen">
