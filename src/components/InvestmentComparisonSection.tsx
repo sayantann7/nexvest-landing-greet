@@ -13,10 +13,10 @@ const InvestmentComparisonSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div
             className="bg-white rounded-xl shadow-xl p-6 order-2 md:order-1"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5,delay: 0.5 }}
+            viewport={{ once: false }}
           >
             <InvestmentChart 
               monthlyInvestment={monthlyInvestment} 
@@ -26,10 +26,10 @@ const InvestmentComparisonSection: React.FC = () => {
           
           <motion.div 
             className="order-1 md:order-2"
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            viewport={{ once: true }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+            viewport={{ once: false }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Get there faster with{" "}

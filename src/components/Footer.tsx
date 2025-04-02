@@ -13,7 +13,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               NexVest
             </motion.h3>
@@ -22,7 +22,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               Your trusted partner for financial growth and investment management.
             </motion.p>
@@ -34,7 +34,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               Services
             </motion.h3>
@@ -43,7 +43,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <li><a href="#" className="text-gray-400 hover:text-nexvest-green">Mutual Funds</a></li>
               <li><a href="#" className="text-gray-400 hover:text-nexvest-green">Stocks</a></li>
@@ -58,7 +58,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               Company
             </motion.h3>
@@ -67,7 +67,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <li><a href="#" className="text-gray-400 hover:text-nexvest-green">About Us</a></li>
               <li><a href="#" className="text-gray-400 hover:text-nexvest-green">Team</a></li>
@@ -82,7 +82,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               Connect
             </motion.h3>
@@ -91,7 +91,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <li><a href="#" className="text-gray-400 hover:text-nexvest-green">Twitter</a></li>
               <li><a href="#" className="text-gray-400 hover:text-nexvest-green">LinkedIn</a></li>
@@ -106,7 +106,7 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <p>&copy; {new Date().getFullYear()} NexVest. All rights reserved.</p>
         </motion.div>

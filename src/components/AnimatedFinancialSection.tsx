@@ -12,7 +12,7 @@ const AnimatedFinancialSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             The Future of <span className="text-nexvest-green">Investing</span>
@@ -29,7 +29,7 @@ const AnimatedFinancialSection: React.FC = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <h3 className="text-3xl font-bold mb-4">Smart Investments for a Better Tomorrow</h3>
             <p className="mb-6">
@@ -43,7 +43,7 @@ const AnimatedFinancialSection: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 <div className="bg-nexvest-green rounded-full p-1 mr-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
@@ -57,7 +57,7 @@ const AnimatedFinancialSection: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 <div className="bg-nexvest-green rounded-full p-1 mr-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
@@ -71,7 +71,7 @@ const AnimatedFinancialSection: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 <div className="bg-nexvest-green rounded-full p-1 mr-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">

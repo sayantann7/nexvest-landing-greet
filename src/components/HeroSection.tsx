@@ -6,6 +6,12 @@ import HeroFinancial3D from './HeroFinancial3D';
 import ThreeAnimation from './ThreeAnimation';
 import CardTilt from './TiltedCard';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { Canvas } from "@react-three/fiber";
+import { Experience } from "@/components/Experience";
+import GlobeCanvas from '@/components/GlobeCanvas';
+import { Html } from '@react-three/drei';
+import Earth from './Earth';
+import SmoothScroll from './SmoothScroll';
 
 const HeroSection = () => {
 
@@ -20,7 +26,8 @@ const HeroSection = () => {
    }, []);
 
    const [typewriterText] = useTypewriter({
-    words: ['Welcome to NexVest!', 'Invest in your freedom', 'Invest in yourself', 'Grow with NexVest!'],
+    words: ['Welcome to NexVest!',
+  "Invest beyond earthly boundaries", 'Go to the moon with NexVest!'],
     loop: true,
     deleteSpeed: 40,
     typeSpeed: 60,
@@ -28,6 +35,7 @@ const HeroSection = () => {
   });
 
   return (
+    <SmoothScroll>
     <div className="relative w-full min-h-screen overflow-hidden bg-nexvest-black">
       {/* 3D Animation Layer (background) */}
       {/* <ThreeAnimation /> */}
@@ -51,7 +59,8 @@ const HeroSection = () => {
            </motion.div>
          )}
        </AnimatePresence>
- 
+
+       <ThreeAnimation />
       
       {/* Main Hero Content */}
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 min-h-screen">
@@ -61,7 +70,9 @@ const HeroSection = () => {
              alt="Photographer on car"
              className="object-cover h-full w-full"
            /> */}
-            <CardTilt />
+            {/* <CardTilt /> */}
+            {/* <GlobeCanvas /> */}
+            <Earth />
          </div>
         
         <motion.div 
@@ -117,6 +128,7 @@ const HeroSection = () => {
         </motion.div>
       </div>
     </div>
+    </SmoothScroll>
   );
 };
 

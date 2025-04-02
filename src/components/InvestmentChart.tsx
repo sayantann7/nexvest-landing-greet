@@ -85,7 +85,12 @@ const InvestmentChart: React.FC<InvestmentChartProps> = ({
         </div>
       </div>
       
-      <div className="w-full h-64 mb-8">
+      <motion.div className="w-full h-64 mb-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5, delay: 1 }}
+        viewport={{ once: false } }
+      >
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={yearlyData}
@@ -109,7 +114,7 @@ const InvestmentChart: React.FC<InvestmentChartProps> = ({
             <Area type="monotone" dataKey="direct" stroke="#00a651" fillOpacity={1} fill="url(#colorDirect)" />
           </AreaChart>
         </ResponsiveContainer>
-      </div>
+      </motion.div>
       
       <div className="flex justify-between mb-4">
         <motion.div 
