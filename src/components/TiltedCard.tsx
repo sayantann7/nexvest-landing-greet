@@ -42,7 +42,7 @@ const CardTilt = () => {
   return (
     <>
       <div
-        className='card relative h-52 w-52 transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform'
+        className='card relative h-full w-full transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform'
         onMouseMove={onMouseMove}
         onMouseLeave={onMouseLeave}
         style={{
@@ -51,8 +51,8 @@ const CardTilt = () => {
         }}
       >
         <div className='group relative flex h-full w-full select-none items-center justify-center rounded-lg border border-gray-900 bg-gradient-to-tr from-gray-950 to-gray-900 text-sm font-light text-gray-300'>
-          <span className='text-md bg-gradient-to-t from-gray-400 to-white bg-clip-text font-bold text-transparent'>
-            Hover me
+          <span className='text-md bg-gradient-to-t from-gray-400 to-white bg-clip-text font-bold text-transparent h-full w-full'>
+          <img src="/bg.png" className="object-none object-center w-full h-full" />
           </span>
         </div>
       </div>

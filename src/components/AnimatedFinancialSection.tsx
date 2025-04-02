@@ -83,15 +83,15 @@ const AnimatedFinancialSection: React.FC = () => {
             </ul>
           </motion.div>
           
-          <motion.div 
+          {/* <motion.div 
             className="md:w-1/2 h-96"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            {/* <FinancialAnimation3D /> */}
-          </motion.div>
+            <FinancialAnimation3D />
+          </motion.div> */}
         </div>
       </div>
     </div>

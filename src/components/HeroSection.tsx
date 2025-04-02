@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import HeroFinancial3D from './HeroFinancial3D';
 import ThreeAnimation from './ThreeAnimation';
-
+import CardTilt from './TiltedCard';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 const HeroSection = () => {
 
@@ -17,6 +18,14 @@ const HeroSection = () => {
  
      return () => clearTimeout(timer);
    }, []);
+
+   const [typewriterText] = useTypewriter({
+    words: ['Welcome to NexVest!', 'Invest in your freedom', 'Invest in yourself', 'Grow with NexVest!'],
+    loop: true,
+    deleteSpeed: 40,
+    typeSpeed: 60,
+    delaySpeed: 1100
+  });
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-nexvest-black">
@@ -46,12 +55,13 @@ const HeroSection = () => {
       
       {/* Main Hero Content */}
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 min-h-screen">
-         <div className="hidden md:block relative">
-           <img
+         <div className="hidden md:block relative p-0">
+           {/* <img
              src="/bg.png"
              alt="Photographer on car"
              className="object-cover h-full w-full"
-           />
+           /> */}
+            <CardTilt />
          </div>
         
         <motion.div 
@@ -67,7 +77,8 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5 }}
             >
-              Invest in the freedom to choose
+              <span>{typewriterText}</span>
+              <Cursor cursorStyle="" />
             </motion.h1>
             
             <motion.p 
