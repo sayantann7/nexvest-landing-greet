@@ -7,6 +7,7 @@ import InvestmentComparisonSection from '@/components/InvestmentComparisonSectio
 import TestimonialsSection from '@/components/TestimonialsSection';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
+import AnimatedFinancialSection from '@/components/AnimatedFinancialSection';
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <InvestmentComparisonSection />
+      <AnimatedFinancialSection />
       <FeaturesSection />
       <TestimonialsSection />
       <CtaSection />

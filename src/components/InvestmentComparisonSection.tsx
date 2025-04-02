@@ -1,10 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import InvestmentChart3D from './InvestmentChart3D';
 import { Button } from '@/components/ui/button';
+import InvestmentChart from './InvestmentChart';
 
 const InvestmentComparisonSection: React.FC = () => {
+  const [monthlyInvestment, setMonthlyInvestment] = useState<number>(7000);
+
   return (
     <div className="w-full py-16 bg-[#f0fafa]">
       <div className="container mx-auto px-4">
@@ -16,7 +18,10 @@ const InvestmentComparisonSection: React.FC = () => {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <InvestmentChart3D />
+            <InvestmentChart 
+              monthlyInvestment={monthlyInvestment} 
+              onInvestmentChange={setMonthlyInvestment} 
+            />
           </motion.div>
           
           <motion.div 
