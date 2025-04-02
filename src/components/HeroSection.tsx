@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import ThreeAnimation from './ThreeAnimation';
 
 const HeroSection = () => {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -36,6 +37,9 @@ const HeroSection = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      
+      {/* 3D Animation Layer */}
+      <ThreeAnimation />
       
       {/* Main Hero Content */}
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 min-h-screen">
