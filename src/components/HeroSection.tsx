@@ -102,14 +102,6 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </div>
-      
-      {/* Background particles (optional) */}
-      <div className="absolute bottom-0 right-0 w-64 h-64 opacity-20">
-        <div className="absolute w-4 h-4 rounded-full bg-white top-12 left-12"></div>
-        <div className="absolute w-3 h-3 rounded-full bg-white top-24 left-40"></div>
-        <div className="absolute w-5 h-5 rounded-full bg-white top-48 left-8"></div>
-        <div className="absolute w-3 h-3 rounded-full bg-white top-36 left-24"></div>
-      </div>
     </div>
   );
 };
