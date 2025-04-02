@@ -41,10 +41,10 @@ const ThreeAnimation: React.FC = () => {
 
     // Create particles (stars)
     const createParticles = () => {
-      const particleCount = 1500;
+      const particleCount = 1000;
       const particles_geometry = new THREE.BufferGeometry();
-      const positions = new Float32Array(particleCount * 3);
-      const colors = new Float32Array(particleCount * 3);
+      const positions = new Float32Array(particleCount * 2);
+      const colors = new Float32Array(particleCount * 2);
       
       for (let i = 0; i < particleCount * 3; i += 3) {
         // Distribute particles in a sphere
@@ -220,8 +220,8 @@ const ThreeAnimation: React.FC = () => {
     
     // Initialize all visual elements
     createParticles();
-    createConnections();
-    createDataCubes();
+    // createConnections();
+    // createDataCubes();
     
     // Animation function
     const animate = () => {

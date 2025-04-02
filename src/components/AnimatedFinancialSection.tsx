@@ -90,7 +90,7 @@ const AnimatedFinancialSection: React.FC = () => {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <FinancialAnimation3D />
+            {/* <FinancialAnimation3D /> */}
           </motion.div>
         </div>
       </div>
