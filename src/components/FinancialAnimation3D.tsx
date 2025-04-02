@@ -62,15 +62,8 @@ const FinancialAnimation3D: React.FC = () => {
       edge.scale.set(0.4, 0.4, 1);
       coin.add(edge);
       
-      // Add embossed $ symbol
+      // Add embossed symbol (using simple circle instead of TextGeometry)
       if (i % 2 === 0) { // Add to every other coin to reduce complexity
-        const dollarGeometry = new THREE.TextGeometry('$', {
-          font: new THREE.Font(), // Placeholder - we'll use a circle instead
-          size: 0.5,
-          height: 0.02,
-        });
-        
-        // Fallback to circle since TextGeometry requires font loading
         const symbolGeometry = new THREE.CircleGeometry(0.25, 32);
         const symbolMaterial = new THREE.MeshStandardMaterial({
           color: 0xDAA520,
